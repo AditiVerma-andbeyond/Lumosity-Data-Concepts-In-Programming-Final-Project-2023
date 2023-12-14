@@ -1,0 +1,72 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red255\green255\blue255;
+\red11\green76\blue180;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c0\c87059;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c1961\c38824\c75686;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14620\viewh12520\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs28 \cf2 \expnd0\expndtw0\kerning0
+MSBI 31300 1 (Autumn 2023)\
+\
+\cf3 \cb4 Concepts in Programming, Final Project, Aditi Verma\
+\pard\pardeftab720\sa140\partightenfactor0
+\cf3 \
+Requirements\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf2 1. Describes the project. If you are doing a predefined project choice, explain how you implemented that specific choice. This description should match what you submitted as your project proposal. (4 points)\cb1 \uc0\u8232 \cb4 2. Explains in a few sentences why you selected this project, and if you learned what you had hoped to learn by doing this project (from your proposal). Explain. (4 points)\cb1 \uc0\u8232 \cb4 3. What you would do differently if you were to have an opportunity to redo this project and why. (4 points)\cb1 \uc0\u8232 \cb4 4. How to run your project. (4 points)\cb1 \uc0\u8232 \cb4 5. Was the project challenging in the way you expected? What did you overcome? (4 points)\cb1 \uc0\u8232 \cb4 6. Cited sources, appropriate acknowledgements. Explain how each source applied to your project. (5 points) \cb1 \
+\
+Details:\
+1. Project description\
+\pard\pardeftab720\sl368\qj\partightenfactor0
+\cf2 Data Parse Adventure:\
+The dataset that I have identified to work on for this project comes from {\field{\*\fldinst{HYPERLINK "https://www.nature.com/articles/s41597-022-01872-8"}}{\fldrslt \cf5 \ul \ulc5 Jeff et al., 2022, Scientific Data}}. The dataset includes cognitive test scores from over 750,000 individuals. The individuals voluntarily self-administered the NeuroCognitive Performance Test (NCPT; developed by Lumos Labs, Inc.) using a web-browser. NCPT includes eight batteries of tests that evaluate several aspects of cognition, including visual attention, working memory, object recognition, and reasoning. The data for individuals who have participated in each of these batteries of tests has been made available in csv files on {\field{\*\fldinst{HYPERLINK "https://zenodo.org/records/7249732"}}{\fldrslt \cf5 \ul \ulc5 Zenodo}}. \
+\'a0\
+It would be interesting to explore this data and ask some basic questions such as, how is age related to performance on memory tests and how is the education level related to reasoning. Does cognitive performance generally deteriorate with age or are there some things we get better at? More questions like how different tests of cognition are correlated can also be asked. It would be fun to see how much information can be drawn from this dataset.\
+\
+In implementing the project, I learnt to use packages like Numpy, pandas, Seaborn, Pingouin to work with large datasets, combine multiple csv files, analyse tabular data, perform statistical analysis and visualise the data.\
+\
+2. Motivation and learnings:\
+\
+The reason  I had chosen this project was to familiarise myself with dealing with large tabular datasets. In future, I would like to work on projects that combine the analysis of behavioural data with clinical and biomarker data. I understand that learning to work with large tabular datasets will be extremely important to this end.\
+This project provided me the opportunity to work with a large data pool that combined multiple datasets for different cognitive tests. I learnt how to bin data and subset large datasets to look at specific questions. I learnt how to perform basic exploratory analysis on the tabular data. I also learnt to use multiple packages for visualisation and statistical analysis of the data, all of which would be very helpful for the work I plan to do in the future. \
+I did not go deep into statistical analysis but instead focused on incorporating the concepts learnt in the class, such as making objects, handling errors, using loops. These were all new concepts for me and I was happy to play around with the code and incorporate as many of these new ideas as I could.\
+\
+3. What would I do differently?\
+\
+There is an endless amount of analysis that can be done on this data. I would want to squeeze the data dry and do some more statistical tests; however, that would have made this project insufferable to read. I would definitely want to create an API where the analyses from this data can be presented in an interactive manner using a GUI. \
+Another thing I would do differently is the normalisation of raw scores in Q3. In this case, I have normalised the scores as a percentage of the maximum score for that subtest. Ideally, I should normalise the scores to the maximum score that is possible on that subtest. However, I couldn\'92t find that data and doing so for each of the 21 tests would\'92ve been a little cumbersome.\
+\
+4. \cb4 How to run your project.\
+The project is in a Jupyter Notebook and has been commented so as to make it easy to understand and run. I have also uploaded the 8 csv files that contain the data. The answer to requirement 3 in the Data Parse Adventure instruction sheet can be run with a subset of files; it asks for user input for file path and will run on whatever csv files are there in the folder to which the path is provided. Please create a new folder somewhere on your system to have only these files; if you have csv files containing any other type of data in the same folder; this code will not work; the files will not be merged properly.\
+The answer to requirement 4 needs all the 8 files to be in the same folder as the JupyterLab notebook. It runs a for loop over file names so changing the file names will not work. I could answered 4 as 3 but I attempted 4 before 3 and learnt to handle files better as I progressed working on the project.\
+In case I cannot upload all data files through canvas; they can be found here: https://drive.google.com/drive/folders/1cHuPhwXHxqC4N3YuwEDOrrNAJajdW8KM?usp=sharing\
+\
+\
+5. Was the project challenging in the way you expected? What did you overcome?\
+\
+I found the project quite challenging. I am completely new to pandas and loved learning it. The biggest challenge for me was to figure out the best way to query data over multiple csv files. I tried making a SQL database and also to use dictionaries to store the data using user ids as primary keys. However, that didn\'92t serve my purpose of being able to retrieve the data for the same subtests that were featuring in different csv files for different batteries (each battery contains overlapping subtests). Simply concatenating the csv files and subsetting the data using pandas finally solved my problem. \
+I had also initially done the analysis for every education level and age group, one group at a time, which was very inefficient until I thought of creating an object to analyse. Making the analysis interactive was also challenging but all the things that I learnt in the classes really helped here.\
+Another challenge was making a comparable analysis method for age range which is a string and education level which is a float.\
+\
+6. Citations and Acknowledgements:\
+\
+\pard\tx566\pardeftab720\sl368\qj\partightenfactor0
+\cf2 1. Pingouin for anova: {\field{\*\fldinst{HYPERLINK "https://pingouin-stats.org/build/html/index.html"}}{\fldrslt https://pingouin-stats.org/build/html/index.html}}\
+2. Seaborn for visualisation: {\field{\*\fldinst{HYPERLINK "https://seaborn.pydata.org/generated/seaborn.violinplot.html"}}{\fldrslt https://seaborn.pydata.org/generated/seaborn.violinplot.html}}\
+3. Grouping and subsetting data: https://www.statology.org/pandas-groupby-describe/\
+	https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html\
+4. Pearson\'92s correlation: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html\
+	Concatenating multiple files: https://www.reddit.com/r/learnpython/comments/q08d0v/						loading_multiple_csv_files_into_dataframes_and/\
+5. Calculating mean and sd over a subset of data frame: https://stackoverflow.com/questions/49245451/how-to-			calculate-average-on-a-subset-of-a-subset-of-a-dataframe-in-python\
+	https://stackoverflow.com/questions/49245451/how-to-calculate-average-on-a-subset-of-a-subset-of-a-			dataframe-in-python\
+	https://www.geeksforgeeks.org/how-to-plot-mean-and-standard-deviation-in-pandas/#\
+\
+6. User input for files: https://bobbyhadz.com/blog/python-input-file-path\
+					https://www.geeksforgeeks.org/how-to-read-all-csv-files-in-a-folder-in-pandas/\
+7. Multiple exception handling: https://www.geeksforgeeks.org/multiple-exception-handling-in-python/#\
+8. Normalisation of raw scores: https://sparkbyexamples.com/pandas/pandas-percentage-total-with-groupby/\
+9. I would like to thank my friend, Venkat, who helped me in the initial stages of combining the multiple csv files. He helped put the data in dictionaries with each user id as a primary key. I was under the impression that the same person taking different batteries of test would feature with the same user id in different files. However, putting thing in the dictionary with user id as primary keys helped me realise that the user ids were reset for each battery and I couldn\'92t use dictionaries.\
+}
